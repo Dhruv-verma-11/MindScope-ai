@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: mindscope-app
+    name: mindscope
     env: python
+    plan: free
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: python app.py  # change this if your main file is different
     envVars:
-      - key: PORT
-        value: 10000
+      - key: PYTHON_VERSION
+        value: 3.10.12
