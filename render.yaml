@@ -3,9 +3,5 @@ services:
     name: mindscope
     env: python
     plan: free
-    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py  # change this if your main file is different
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.12
+    startCommand: python app.py  # or your actual entry file
