@@ -164,6 +164,9 @@ if __name__ == '__main__':
         print("   - GET  /model-info: Model information")
         print("   - GET  /health    : Health check")
         print("\n🌐 Starting Flask server...")
-        app.run(debug=True, host='0.0.0.0', port=5000)
+        import os
+        port = int(os.environ.get("PORT", 5000))
+        app.run(debug=True, host='0.0.0.0', port=port)
+
     else:
         print("❌ Failed to load model components. Please check your file paths.")
